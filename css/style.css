@@ -1,92 +1,112 @@
-.header {}
+.header {
+    border-bottom: 1px solid #ddd;
+}
 
 .header .inner {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 1200px;
-    height: 80px;
+    height: 100px;
+}
+
+.header .gnb {
     margin: 0 auto;
 }
 
-.header h1 img {
-    height: 60px;
-}
-
-.gnb ul {
+.header .gnb>ul {
     display: flex;
-    gap: 40px;
+    gap: 30px;
 }
 
-.main-visual {
-    position: relative;
-    height: 700px;
-    background: url(../images/64e55237bdd9a.jpg);
-}
-
-.main-visual .tit {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-
-    transform: translate(-50%, -50%);
-
-    width: 1200px;
-
-}
-
-.main-visual .tit h2 {
-    margin: 0 0 24px 0;
-    font-size: 56px;
-    font-weight: 800;
-    color: #fff;
-}
-
-.main-visual .tit p {
-    font-size: 24px;
-    font-weight: 300;
-    color: #fff;
-    text-shadow: 0 0 2px #333;
-}
-
-.main-content {
-    padding: 80px 0;
-}
-
-.main-content .tit {
-    margin: 0 0 40px 0;
-}
-
-.main-content .tit h2 {
-    font-size: 40px;
-    font-weight: 800;
-    margin: 0 0 16px 0;
-    text-align: center;
-}
-
-.main-content .tit p {
+.header .gnb>ul>li>a {
+    display: block;
     font-size: 16px;
     font-weight: 400;
-    text-align: center;
 }
 
-.main-content .inner {
-    display: flex;
-    justify-content: center;
-    gap: 160px;
-    width: 1200px;
-    margin: 0 auto;
+.main_visual {}
+
+.main_visual .main_visual_slide .itm {
+    position: relative;
+    height: 792px;
 }
 
-.main-content .inner .itm {
+.main_visual .main_visual_slide .itm01 {
+    background: url(../images/main_visual.jpg) center center/cover;
+}
+
+.main_visual .main_visual_slide {
     position: relative;
 }
 
-.main-content .inner .itm~itm::before {
-    content: "";
+.main_visual .main_visual_slide .slick-dots {
     position: absolute;
-    left: -80px;
-    width: 1px;
-    height: 100%;
-    background: #ddd;
+    bottom: 80px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    display: flex;
+}
+
+.main_visual .main_visual_slide .slick-dots button {
+    border: none;
+    width: 20px;
+    height: 20px;
+
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+
+    font-size: 12px;
+
+    border-radius: 50%;
+}
+
+.main_visual .main_visual_slide .itm .slg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1920px;
+    width: 100%;
+}
+
+.main_visual .main_visual_slide .itm .slg strong {
+    display: flex;
+    margin: 0 0 16px  0;
+    font-size: 24px;
+    font-weight: 400;
+    color: #000;
+text-indent: -4px;
+}
+
+.main_visual .main_visual_slide .itm .slg p {
+    display: block;
+    font-size: 24px;
+    font-weight: 400;
+    color: #000;
+}
+
+.main_content {
+    padding: 60px 0;
+}
+
+.main_content .tit {
+    margin: 0 auto 40PX auto;
+}
+
+.main_content .tit h2 {
+    text-align: center;
+}
+
+.main_content .tit .desc {
+    text-align: center;
+}
+
+.main_content .inner {
+    display: flex;
+    gap: 30px;
+}
+
+.main_content .inner>* {
+    flex: 1;
 }
